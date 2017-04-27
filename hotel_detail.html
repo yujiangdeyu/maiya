@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>酒店详情页</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="css/model_style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.js" ></script>
+</head>
+<body>
+<div class="hotelDetail_carousel">
+        <div class="swiper-container1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/33333.jpg" alt=""/></div>
+                <div class="swiper-slide"><img src="images/33333.jpg" alt=""/></div>
+                <div class="swiper-slide"><img src="images/33333.jpg" alt=""/></div>
+            </div>
+        </div>
+</div>
+
+<div class="hotel_detail">
+    <h3 class="hotel_name">麦芽公寓大冲新城花园&nbsp;·&nbsp;<a href="#">A-1125<i></i></a></h3>
+    <h4 class="hotel_price">￥300/天</h4>
+    <h5 class="phone_number">酒店电话:13760276400</h5>
+
+    <div class="installation">
+        <h4>酒店设施</h4>
+        <ul>
+            <li><i></i>免费WiFi</li>
+            <li><i></i>免费停车</li>
+            <li><i></i>叫醒服务</li>
+            <li><i></i>电吹风</li>
+            <li><i></i>全天热水</li>
+            <li><i></i>无烟房</li>
+            <li><i></i>随时入住</li>
+        </ul>
+    </div>
+
+    <div class="hotel_map">
+            <div class="container map_container">
+                <div class="wm-map-address">南山区大冲新城花园</div>
+                <div id="allmap"></div>
+            </div>
+    </div>
+    <div class="around_service">
+        <h4>周边配套</h4>
+        <ul>
+            <li class="around_transit"><i></i><span>公交：</span><p>距深圳宝安机场：16.9公里<br/>
+                距香港国际机场：25.3公里<br/>
+                距深圳西站：4.8公里<br/>
+                距深圳北站：11.2公里<br/>
+                距深圳火车站：17.1公里<br/>
+                距红磡站：35.6公里<br/>
+                距珠海北站：44.0公里<br/>
+                距深圳宝安汽车站：6.0公里<br/>
+                距深圳福田汽车站：6.4公里<br/>
+                距石岩汽车站：16.0公里</p></li>
+            <li class="around_subway"><i></i><span>地铁：</span><p>距巴粮坊：144米<br/>
+                距北京饺子馆：279米<br/>
+                距上岛咖啡(科技园店)：411米<br/>
+                距土陶风川菜酒楼：117米<br/>
+                距新梅园(汇景苑店)：923米<br/>
+                距老树咖啡(科技园店)：790米<br/>
+                距嘉旺(科技园店)：350米<br/>
+                距雨花西餐厅(科技园店)：667米<br/>
+                距北方饺子馆(大冲店)：379米<br/>
+                距千厨湘味馆：128米</p></li>
+            <li class="around_restaurant"><i></i><span>餐厅：</span><p>500米内27家中餐厅：包括小吃、川菜、湘菜、火锅等；西餐厅:雪牛餐厅、alittle bit；500米内有12家快餐店</p></li>
+            <li class="around_shopping"><i></i><span>购物：</span><p>缤纷商业中心、弯畔百货、天虹商场、欧洲城；超市有：华润万家、麦德龙、7-ELEVEN</p></li>
+            <li class="around_leisure"><i></i><span>娱乐：</span><p>世界之窗、中国民俗文化村、大沙河公园、荔香公园、深圳大学、名商高尔夫球会、华侨城欢乐海岸、欢乐谷等</p></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<script src="js/main.js"></script>
+<script src="js/swiper-3.3.1.min.js"></script>
+<script>
+    var mySwiper1 = new Swiper ('.swiper-container1', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay : 3000,
+        autoplayDisableOnInteraction : false,
+        pagination: '.swiper-pagination'
+    });
+</script>
+
+<!--百度地图-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3ecea51f560650b1ed8a4b99808f52e8"></script>
+<script type="text/javascript">
+//    var map = new BMap.Map("allmap");
+//    map.enableScrollWheelZoom();
+//    map.centerAndZoom(new BMap.Point(113.958601,22.546777), 11);  // 初始化地图
+//    // 1. 创建标注的点坐标值（Point类型）
+////    var point = new BMap.Point(113.958601,22.546777);
+//
+//    // 进行地址解析
+//    // a. 创建地址解析对象
+//    var geo = new BMap.Geocoder();
+//    // b. 进行地址的解析
+//    geo.getPoint("大冲新城花园",function(point){
+//        map.centerAndZoom(point, 18);
+//        // 2. 创建标注（覆盖物）对象
+//        var marker = new BMap.Marker(point);
+//        // 3. 将标注添加到百度地图中
+//        map.addOverlay(marker);
+//
+//        // 1. 创建信息窗口对象
+//        var opts = {
+//            width : 100,
+//            height : 50,
+//            title : "大冲新城花园"
+//        }
+//        var info = new BMap.InfoWindow("大冲新城花园", opts);
+//        // 2. 通过Map对象打开信息窗口
+//        marker.addEventListener("click",function(){
+//            map.openInfoWindow(info,point);
+//        });
+//    });
+// 百度地图API功能
+    var map = new BMap.Map("allmap");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(113.96298,22.54982), 17);  // 初始化地图,设置中心点坐标和地图级别
+    var point = new BMap.Point(113.96298,22.54982);
+    map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+    map.setCurrentCity("深圳");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+        // 2. 创建标注（覆盖物）对象
+        var marker = new BMap.Marker(new BMap.Point(113.96298,22.54982));
+        // 3. 将标注添加到百度地图中
+        map.addOverlay(marker);
+        // 1. 创建信息窗口对象
+        var opts = {
+            width : 100,
+            height : 50,
+            title : "大冲新城花园"
+        }
+        var info = new BMap.InfoWindow("南山区高新园大冲新城花园", opts);
+        // 2. 通过Map对象打开信息窗口
+        marker.addEventListener("click",function(){
+            map.openInfoWindow(info,point);
+        });
+</script>
+</body>
+</html>

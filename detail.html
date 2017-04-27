@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title></title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="css/model_style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.js" ></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.leanModal.min.js"></script>
+</head>
+<body>
+<div class="carousel_1">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""/></div>
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""/></div>
+            <div class="swiper-slide"><img src="images/three_pic.jpg" alt=""/></div>
+        </div>
+        <!--分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<div class="total_detail">
+    <div class="house_intro">
+        <h3 class="house_name">新城花园&nbsp;·&nbsp;<a href="#loginmodal2" id="modaltrigger2">A栋13号<i></i></a></h3>
+        <h4 class="house_price">
+            <span>￥5000/月</span> 整租/合租
+        </h4>
+    </div>
+    <div class="service">
+        <ul>
+            <li><img src="images/icon/water_icon.png" alt=""/><span>水费</span></li>
+            <li><img src="images/icon/ele_icon.png" alt=""/><span>电费</span></li>
+            <li><img src="images/icon/24_icon.png" alt=""/><span>24小时入住</span></li>
+            <li><img src="images/icon/deposit_icon.png" alt=""/><span>押金</span></li>
+            <li><img src="images/icon/property_icon.png" alt=""/><span>物业管理费</span></li>
+        </ul>
+    </div>
+    <div class="house_detail">
+        <div class="title_house_detail">
+            房间详情<span><a href="#house_type" id="modal_houseType">查看户型图</a><i></i></span>
+        </div>
+        <ul>
+            <li>面积<span>50m&sup2;</span></li>
+            <li>户型<span>三室一厅</span></li>
+            <li>楼层<span>4楼</span></li>
+            <li>朝向<span>正北</span></li>
+            <li><a href="#furniture_modal" id="modal_furniture">双人沙发<span>+21<i></i></span></a></li>
+        </ul>
+    </div>
+    <!--弹出的模态框-->
+    <div id="furniture_modal" style="display:none;">
+        <a class="modal_close" id="furniture_close" href="#"><span></span></a>
+        <ul>
+            <li>电视</li>
+            <li>茶几</li>
+            <li>电脑桌</li>
+            <li>衣柜</li>
+            <li>洗衣机</li>
+            <li>冰箱</li>
+            <li>燃气灶</li>
+            <li>电饭锅</li>
+            <li>抽油烟机</li>
+            <li>热水器</li>
+            <li>沙发</li>
+            <li>椅子</li>
+        </ul>
+    </div>
+    <div id="house_type" style="display:none;">
+        <img src="images/1.jpg" alt=""/>
+    </div>
+    <div id="loginmodal2" style="display:none;">
+        <a class="modal_close" id="loginmodal2_close" href="#"><span></span></a>
+        <div class="thisroom">
+            <img src="images/appointment.jpg" alt=""/>
+            <h3 class="house_name">新城花园&nbsp;·&nbsp;A栋13号</h3>
+            <h4 class="house_price">￥5000/月</h4>
+        </div>
+        <div class="room_state">
+            <div class="on"></div>
+            <div class="off"></div>
+        </div>
+        <ul class="roomlist">
+            <li>A栋10楼102</li>
+            <li>A栋10楼103</li>
+            <li>A栋10楼104</li>
+            <li>A栋10楼105</li>
+            <li>A栋10楼106</li>
+            <li>A栋10楼107</li>
+            <li>A栋10楼108</li>
+            <li>B栋10楼112</li>
+            <li>B栋10楼122</li>
+            <li>B栋10楼134</li>
+            <li>B栋10楼105</li>
+            <li>B栋10楼106</li>
+        </ul>
+        <input class="confirm" type="submit" value="确定"/>
+    </div>
+    <!--周边-->
+    <div class="house_around">
+        <div class="title_house_around">
+            小区周边
+        </div>
+        <div class="around_detail">
+            <ul>
+                <li class="around_detail_transit"><i></i><span>公交</span></li>
+                <li class="around_detail_shopping"><i></i><span>购物</span></li>
+                <li class="around_detail_leisure"><i></i><span>休闲</span></li>
+                <li class="around_detail_food"><i></i><span>美食</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <ul class="footer">
+        <li class="appointment_onphone"><a href="#">电话预定</a></li>
+        <li class="appointment_online"><a href="#">在线预定</a></li>
+    </ul>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/swiper-3.3.1.min.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay : 3000,
+        autoplayDisableOnInteraction : false,
+        // 分页器
+        pagination: '.swiper-pagination'
+    })
+</script>
+<script>
+    $(function(){
+        $('#modal_furniture').leanModal({ top: 0, overlay: 0.45, closeButton: ".modal_close" });
+        $('#modaltrigger2').leanModal({ top: 0, overlay: 0.45, closeButton: ".modal_close" });
+        $('#modal_houseType').leanModal({ top: 100, overlay: 0.45, closeButton: ".hidemodal" });
+    });
+
+
+</script>
+</body>
+</html>

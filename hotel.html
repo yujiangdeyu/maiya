@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>酒店页面</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+</head>
+<body>
+<div class="hotel_carousel">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/hotel1.png" alt=""/></div>
+            <div class="swiper-slide"><img src="images/hotel2.png" alt=""/></div>
+            <div class="swiper-slide"><img src="images/hotel3.png" alt=""/></div>
+        </div>
+        <!--分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<div class="hotel_totalContent">
+    <!--地址-->
+    <div class="room_address">
+        <div class="addr_detail">
+            <h4>南山区-大冲新城花园</h4>
+            <h5><i></i>距离高新地铁站仅51m,步行一分钟即到</h5>
+        </div>
+
+    </div>
+    <img class="reasonformaiya" src="images/reasonformaiya.png" alt=""/>
+    <div class="double_room">
+        <img src="images/hotel4.png" alt=""/>
+        <div class="doubleRoom_describe">
+            <!--<h4>大冲新城花园<span>60m&sup2;</span></h4>-->
+            <!--<h6><i></i>高新园地铁站</h6>-->
+            <div class="doubleRoom_price">￥300/天</div>
+            <div class="doubleRoom_type">双人间</div>
+        </div>
+    </div>
+    <div class="single_room">
+        <img src="images/hotel2.png" alt=""/>
+        <div class="singleRoom_describe">
+            <!--<h4>大冲新城花园<span>60m&sup2;</span></h4>-->
+            <!--<h6><i></i>高新园地铁站</h6>-->
+            <div class="singleRoom_price">￥275/天</div>
+            <div class="singleRoom_type">单人间</div>
+        </div>
+    </div>
+    <div class="around_title">
+        <p>周边配套</p>
+    </div>
+    <div class="around_service">
+        <ul>
+            <li class="around_transit"><i></i><span>公交：</span><p>19路、32路、66路、392路、N8路、高峰专线104路、42路、70路、101路、113路、121路、204路等</p></li>
+            <li class="around_subway"><i></i><span>地铁：</span><p>高新地铁站(518米)、白石洲站(1.2公里)、深大站(1.4公里)、世界之窗站(2公里)、科苑站(2.2公里)附近附近</p></li>
+            <li class="around_restaurant"><i></i><span>餐厅：</span><p>500米内27家中餐厅：包括小吃、川菜、湘菜、火锅等；西餐厅:雪牛餐厅、alittle bit；500米内有12家快餐店</p></li>
+            <li class="around_shopping"><i></i><span>购物：</span><p>缤纷商业中心、弯畔百货、天虹商场、欧洲城；超市有：华润万家、麦德龙、7-ELEVEN</p></li>
+            <li class="around_leisure"><i></i><span>娱乐：</span><p>世界之窗、中国民俗文化村、大沙河公园、荔香公园、深圳大学、名商高尔夫球会、华侨城欢乐海岸、欢乐谷等</p></li>
+        </ul>
+    </div>
+</div>
+
+
+<script src="js/main.js"></script>
+<script src="js/swiper-3.3.1.min.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay : 3000,
+        autoplayDisableOnInteraction : false,
+        // 分页器
+        pagination: '.swiper-pagination'
+    })
+</script>
+</body>
+</html>
